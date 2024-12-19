@@ -1,6 +1,6 @@
 {
   "name": "splitpanes-nuxt",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Vue 3 Splitpanes module for Nuxt",
   "repository": "xingxing-collective/splitpanes-nuxt",
   "license": "MIT",

@@ -1,18 +1,40 @@
-import { defineNuxtModule, addPlugin, createResolver } from '@nuxt/kit'
+import { defineNuxtModule, addComponent } from '@nuxt/kit'
 
-export default defineNuxtModule({
+export type { Splitpanes, Pane } from 'splitpanes'
+
+export interface SplitpanesOption {
+  prefix: string
+}
+
+export default defineNuxtModule<SplitpanesOption>({
   meta: {
     name: 'splitpanes-nuxt',
     configKey: 'splitpanes',
+    compatibility: {
+      nuxt: '>=3.0.0',
+    },
   },
-  defaults: {},
-  setup(_options, _nuxt) {
-    const { resolve } = createResolver(import.meta.url)
+  setup(options, nuxt) {
+    const prefix = options.prefix || nuxt.options.splitpanes?.prefix || '';
 
-    const runtimeDir = resolve('./runtime')
-
-    addPlugin({
-      src: resolve(runtimeDir, 'plugin'),
+    (['Splitpanes', 'Pane'] as string[]).map(c => ({
+      name: `${prefix}${c}`,
+      filePath: 'splitpanes/dist/splitpanes.es.js',
+      export: c,
+    })).forEach((c) => {
+      addComponent(c)
     })
+
+    // Add slider css
+    nuxt.options.css.unshift('splitpanes/dist/splitpanes.css')
   },
 })
+
+declare module '@nuxt/schema' {
+  interface NuxtConfig {
+    splitpanes?: SplitpanesOption
+  }
+  interface NuxtConfig {
+    splitpanes?: SplitpanesOption
+  }
+}

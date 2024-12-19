@@ -1,7 +1,5 @@
 import { defineNuxtModule, addComponent } from '@nuxt/kit'
 
-export type { Splitpanes, Pane } from 'splitpanes'
-
 export interface SplitpanesOption {
   prefix: string
 }

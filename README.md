@@ -1,41 +1,50 @@
-<!--
-Get your module up and running quickly.
+# Splitpanes Nuxt Module
 
-Find and replace all on all files (CMD+SHIFT+F):
-- Name: My Module
-- Package name: my-module
-- Description: My new Nuxt module
--->
+This module integrates the [Splitpanes](https://github.com/antoniandre/splitpanes) component with Nuxt 3.
 
-# My Module
-
-[![npm version][npm-version-src]][npm-version-href]
-[![npm downloads][npm-downloads-src]][npm-downloads-href]
-[![License][license-src]][license-href]
-[![Nuxt][nuxt-src]][nuxt-href]
-
-My new Nuxt module for doing amazing things.
-
-- [✨ &nbsp;Release Notes](/CHANGELOG.md)
-<!-- - [🏀 Online playground](https://stackblitz.com/github/your-org/my-module?file=playground%2Fapp.vue) -->
-<!-- - [📖 &nbsp;Documentation](https://example.com) -->
-
-## Features
-
-<!-- Highlight some of the features your module provide here -->
-- ⛰ &nbsp;Foo
-- 🚠 &nbsp;Bar
-- 🌲 &nbsp;Baz
-
-## Quick Setup
-
-Install the module to your Nuxt application with one command:
+## Installation
 
 ```bash
-npx nuxi module add my-module
+npx nuxi@latest module add splitpanes-nuxt
 ```
 
-That's it! You can now use My Module in your Nuxt app ✨
+or with Yarn:
+
+```bash
+npx nuxi@latest module add splitpanes-nuxt
+```
+## Usage
+
+In your `nuxt.config.ts` (or `nuxt.config.js`), add the module:
+
+```javascript
+export default {
+  modules: [
+    'splitpanes-nuxt'
+  ]
+}
+```
+
+With this configuration, you can now use the `Splitpanes` and `Pane` components in your project. If you want to add a prefix to these component names, you can add a `splitpanes` configuration to your `nuxt.config.ts`:
+
+```javascript
+export default {
+  modules: [
+    'splitpanes-nuxt'
+  ],
+  carousel: {
+    prefix: 'MyPrefix'
+  }
+}
+```
+
+This will allow you to use the components with a prefix, like so: `<MyPrefixSplitpanes />`, `<MyPrefixPane />`, etc.
+
+## Further References
+
+For detailed information about the Splitpanes component, its usage, options and events, please refer to the [official Splitpanes documentation](https://antoniandre.github.io/splitpanes/).
+
+To contribute, submit issues or pull requests, visit the [Splitpanes GitHub repository](https://github.com/antoniandre/splitpanes).
 
 
 ## Contribution

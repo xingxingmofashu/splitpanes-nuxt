@@ -32,7 +32,7 @@ export default {
   modules: [
     'splitpanes-nuxt'
   ],
-  carousel: {
+  splitpanes: {
     prefix: 'MyPrefix'
   }
 }

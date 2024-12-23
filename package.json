@@ -1,6 +1,6 @@
 {
   "name": "splitpanes-nuxt",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Vue 3 Splitpanes module for Nuxt",
   "repository": "xingxing-collective/splitpanes-nuxt",
   "license": "MIT",
@@ -14,7 +14,13 @@
   },
   "main": "./dist/module.cjs",
   "types": "./dist/types.d.ts",
-  "keywords": ["splitpanes","split panes","pane","layout","nuxt-module"],
+  "keywords": [
+    "splitpanes",
+    "split panes",
+    "pane",
+    "layout",
+    "nuxt-module"
+  ],
   "files": [
     "dist"
   ],

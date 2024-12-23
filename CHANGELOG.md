@@ -1,6 +1,18 @@
 # Changelog
 
 
+## v1.0.3
+
+[compare changes](https://github.com/xingxing-collective/splitpanes-nuxt/compare/v1.0.2...v1.0.3)
+
+### 🏡 Chore
+
+- Add keywords ([1773e04](https://github.com/xingxing-collective/splitpanes-nuxt/commit/1773e04))
+
+### ❤️ Contributors
+
+- Xingxingmofashu <xingxingmofashu@outlook.com>
+
 ## v1.0.2
 
 [compare changes](https://github.com/xingxing-collective/splitpanes-nuxt/compare/v1.0.1...v1.0.2)
